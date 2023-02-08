@@ -1,7 +1,8 @@
 /*
-  - Números (int e double)~
+  - Números (int e double)
   - String (String)
   - Booleano (bool)
+  - dynamic
 */
 
 void main() {
@@ -16,4 +17,32 @@ void main() {
 
   n4 = 6.7;
   print(n1.abs() + n2 + n3 + n4);
+
+  String s1 = 'Bom';
+  String s2 = ' dia';
+
+  print(s1 + s2.toUpperCase() + '!!!'); // O + representa concatenação
+  // toUpperCase() coloca todas as letras em maiúsculo
+
+  bool estaChovendo = true;
+  bool muitoFrio = false;
+
+  print(estaChovendo || muitoFrio);
+  print(estaChovendo && muitoFrio);
+
+  dynamic x = 'Um texto bem legal';
+  print(x);
+
+  x = 123;
+  print(x);
+
+  x = false;
+  print(x);
+
+  var y = 'Outro texto bem legal';
+  // Foi feita uma inferência por conta do compilador
+  print(y);
+
+  // y = 123;
+  // É impossível aplicar um tipo diferente de String por causa da inferência
 }
