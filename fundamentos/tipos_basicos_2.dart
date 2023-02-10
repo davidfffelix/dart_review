@@ -5,6 +5,7 @@
 */
 
 void main() {
+  // List
   List aprovados = [
     'Ana',
     'Carlos',
@@ -22,6 +23,7 @@ void main() {
   print(aprovados[3]);
   print(aprovados.length); // Tamanho da lista
 
+  // Map
   var telefones = {
     'João': '+55 (21) 97777-7777',
     'Maria': '+55 (11) 91234-5678',
@@ -40,6 +42,7 @@ void main() {
   print(telefones.entries);
   // Imprime chave e valor
 
+  // Set
   Set times = {
     'Vasco',
     'Flamengo',
