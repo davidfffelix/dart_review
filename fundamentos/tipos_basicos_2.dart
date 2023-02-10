@@ -28,6 +28,8 @@ void main() {
     'Pedro': '+55 (31) 95555-5555',
     'João': '+55 (31) 90000-0000',
   };
+  // Na chave, não aceita valores repetidos
+  // No valor, já aceita repetição
 
   print(telefones is Map);
   print(telefones);
@@ -38,21 +40,32 @@ void main() {
   print(telefones.entries);
   // Imprime chave e valor
 
-  var times = {
+  Set times = {
     'Vasco',
     'Flamengo',
     'Fortaleza',
-    'São Paulo'
+    'São Paulo',
   };
   // Não aceita repetições
+  // Aceita elementos de outro tipo se tiparmos o Set para Set
+
+  // var times = {'Vasco',
+  // 'Flamengo',
+  // 'Fortaleza',
+  // 'São Paulo',
+  // Se não tiparmos - var, o Set seguirá o padrão dos elementos
+  // Ao tentar adicionar um elemento diferente de String, ocorrerá erro.
 
   print(times is Set);
   times.add('Palmeiras');
   times.add('Palmeiras');
   times.add('Palmeiras');
+  times.add(123);
   print(times.length);
   print(times.contains('Vasco'));
   // Contém o Vasco na lista de times
   print(times.first);
   print(times);
 }
+
+// Obs: As estruturas são mais fáceis de serem consumidas se forem do mesmo tipo
