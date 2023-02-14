@@ -12,4 +12,9 @@ void main() {
   a %= 2;
 
   print(a);
+
+  // Operadores Relacionais (binário/infix) = O resultado sempre é bool
+
+  print(3 > 2);
+  print(3 >= 3);
 }
