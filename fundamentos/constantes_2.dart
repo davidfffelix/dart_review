@@ -27,4 +27,17 @@ void main() {
   lista.add('Rebeca');
 
   print(lista);
+
+  const lista = [
+    'Ana',
+    'Lia',
+    'Gui'
+  ];
+  // lista = [
+  //   'Banana',
+  //   'Maçã'
+  // ];
+  lista.add('Rebeca');
+
+  print(lista);
 }
