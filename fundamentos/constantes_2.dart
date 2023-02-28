@@ -15,11 +15,11 @@ void main() {
 
   // print(lista);
 
-  const lista = [
-    'Ana',
-    'Lia',
-    'Gui'
-  ];
+  // const lista = [
+  //   'Ana',
+  //   'Lia',
+  //   'Gui'
+  // ];
   // lista = [
   //   'Banana',
   //   'Maçã'
