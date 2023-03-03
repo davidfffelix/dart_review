@@ -15,6 +15,26 @@ void main() {
 
   // print(lista);
 
+  // É possível alterar a variável lista
+  // Os itens da lista não podem ser alterados por causa do const
+  var lista = const [
+    'Ana',
+    'Lia',
+    'Gui'
+  ];
+  lista = [
+    'Banana',
+    'Maçã'
+  ];
+
+  print(lista);
+
+  // lista = ['Banana', 'Maçã'];
+  // print(lista);
+  // lista.add('Rebeca');
+
+  // print(lista);
+
   // const lista = [
   //   'Ana',
   //   'Lia',
@@ -24,20 +44,7 @@ void main() {
   //   'Banana',
   //   'Maçã'
   // ];
-  lista.add('Rebeca');
+  // lista.add('Rebeca');
 
-  print(lista);
-
-  const lista = [
-    'Ana',
-    'Lia',
-    'Gui'
-  ];
-  // lista = [
-  //   'Banana',
-  //   'Maçã'
-  // ];
-  lista.add('Rebeca');
-
-  print(lista);
+  // print(lista);
 }
