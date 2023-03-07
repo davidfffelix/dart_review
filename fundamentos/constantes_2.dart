@@ -17,25 +17,7 @@ void main() {
 
   // É possível alterar a variável lista
   // Os itens da lista não podem ser alterados por causa do const
-  var lista = const [
-    'Ana',
-    'Lia',
-    'Gui'
-  ];
-  lista = [
-    'Banana',
-    'Maçã'
-  ];
-
-  print(lista);
-
-  // lista = ['Banana', 'Maçã'];
-  // print(lista);
-  // lista.add('Rebeca');
-
-  // print(lista);
-
-  // const lista = [
+  // var lista = const [
   //   'Ana',
   //   'Lia',
   //   'Gui'
@@ -44,7 +26,23 @@ void main() {
   //   'Banana',
   //   'Maçã'
   // ];
-  // lista.add('Rebeca');
 
   // print(lista);
+
+  // Esse valor precisa ser conhecido no tempo de compilação
+  // Essa precisa ter exatamente os elementos nela.
+  const lista = [
+    'Ana',
+    'Lia',
+    'Gui'
+  ];
+  // lista = [
+  //   'Banana',
+  //   'Maçã'
+  // ];
+
+  // Causa erro por que estamos mudando a lista com essa adição
+  // lista.add('Rebeca');
+
+  print(lista);
 }
