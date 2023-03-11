@@ -11,6 +11,7 @@ void main() {
 
   // Lado direito = Lista
   // Lado esquerdo = Variável
+  // Acessamos o índice da lista e colocamos na variável nota
   for (var nota in notas) {
     print('O valor da nota é $nota.');
   }
