@@ -19,5 +19,17 @@ void main() {
   // Vale 11 por que foi ele que fez a expressão c <= 10 ser falsa e o laço concluísse
   print('[FORA]c = $c');
 
+  var notas = [
+    8.9,
+    9.3,
+    7.8,
+    6.9,
+    9.1
+  ];
+
+  // Quando i for do tamanho do array (5) (i < notas.length;), ele vai sair
+  for (var i = 0; i < notas.length; i++) {
+    print('Nota ${i + 1} = ${notas[i]}.');
+  }
   print('Fim!');
 }
