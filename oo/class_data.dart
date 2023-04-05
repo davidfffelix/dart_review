@@ -1,8 +1,8 @@
 class Data {
   // Instância
-  int dia;
-  int mes;
-  int ano;
+  late int dia;
+  late int mes;
+  late int? ano;
 
   // Construtor padrão com parâmetro
   // Data(int dia, int mes, int ano) {
@@ -15,11 +15,24 @@ class Data {
 
   // Construtor mais simples
   // O que foi passado por parâmetro, ele vai alterar os valores na instância
+  // Parâmetros opcionais
   Data([
     this.dia = 1,
     this.mes = 1,
     this.ano = 1970,
   ]);
+
+  // Parâmetros nomeados
+  Data.com({
+    this.dia = 1,
+    this.mes = 1,
+    this.ano,
+  });
+
+  Data.ultimoDiaDoAno(this.ano) {
+    mes = 12;
+    dia = 31;
+  }
 
   String obterFormatada() {
     return '$dia/$mes/$ano';
@@ -49,4 +62,13 @@ main() {
   print(dataAniversario.toString());
 
   print(Data(30, 09));
+
+  print(Data.com(
+    ano: 2022,
+  ));
+
+  var dataFinal = Data.com(dia: 12, ano: 1907);
+  print(dataFinal);
+
+  print(Data.ultimoDiaDoAno(2022));
 }
