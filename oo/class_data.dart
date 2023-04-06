@@ -71,4 +71,7 @@ main() {
   print(dataFinal);
 
   print(Data.ultimoDiaDoAno(2022));
+
+  Data exemplo = Data(30);
+  print(exemplo);
 }
