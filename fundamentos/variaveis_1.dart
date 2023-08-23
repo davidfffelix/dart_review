@@ -20,5 +20,5 @@ void main() {
     'David',
     'Felix'
   ];
-  print(listaPalavras[0]);
+  print('${listaPalavras[0]} - ${listaPalavras[1]}');
 }
