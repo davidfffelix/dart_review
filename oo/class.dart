@@ -13,17 +13,32 @@ void main() {
   print(pessoa2.casado);
 
   print(pessoa2.aniversario());
+
+  Pessoa pessoa3 = Pessoa.casada(nome: 'Micaele', idade: 30);
+
+  print(pessoa3);
+
+  print(pessoa3.nome);
+  // print(pessoa3.idade);
 }
 
 class Pessoa {
-  Pessoa({required String nome, required int idade}) {
-    this.nome = nome;
-    this.idade = idade;
+  Pessoa({required this.nome, required this.idade, this.casado = false}) {
+    print('Criando o $nome com idade $idade');
   }
 
-  String? nome;
-  int? idade;
-  bool casado = false;
+  Pessoa.casada({required this.nome, required this.idade, this.casado = true});
+
+  Pessoa.solteira({required this.nome, required this.idade, this.casado = false});
+
+  String nome;
+  int idade;
+  bool casado;
+
+  @override
+  String toString() {
+    return 'Pessoa(nome: $nome, idade: $idade)';
+  }
 
   int? aniversario() {
     print('Parabéns, $nome!');
