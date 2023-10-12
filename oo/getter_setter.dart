@@ -3,7 +3,11 @@ void main() {
   Pessoa pessoa2 = Pessoa(nome: 'Daniel', idade: 62, casado: true);
 
   pessoa1.dinheiro = 300;
-  print(pessoa1.dinheiro);
+  if (pessoa1.dinheiro > 150) {
+    print(pessoa1.dinheiro);
+    // print(pessoa1.dinheiro);
+    // print(pessoa1.dinheiro);
+  }
 
   pessoa1.valorDoCarro;
   print(pessoa1.valorDoCarro);
@@ -28,7 +32,7 @@ class Pessoa {
   int idade;
   bool casado;
 
-  double? _dinheiro;
+  double _dinheiro = 0;
 
   @override
   String toString() {
@@ -49,15 +53,16 @@ class Pessoa {
     nome = n;
   }
 
-  set dinheiro(double? valor) {
-    if (valor != null && valor >= 0 && valor < 100000) {
+  set dinheiro(double valor) {
+    if (valor >= 0 && valor < 100000) {
       print('Modificando dinheiro do $nome');
       _dinheiro = valor;
     }
   }
 
-  double? get dinheiro {
+  double get dinheiro {
     print('Lendo dinheiro do $nome');
+    _dinheiro -= 100;
     return _dinheiro;
   }
 }
