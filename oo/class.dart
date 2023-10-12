@@ -42,9 +42,7 @@ class Pessoa {
 
   int? aniversario() {
     print('Parabéns, $nome!');
-    if (idade != null) {
-      idade = idade! + 1;
-    }
+    idade++;
     return idade;
   }
 
