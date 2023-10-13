@@ -3,11 +3,16 @@ void main() {
   Pessoa pessoa2 = Pessoa(nome: 'Daniel', idade: 62, casado: true);
 
   pessoa1.dinheiro = 300;
-  if (pessoa1.dinheiro > 150) {
-    print(pessoa1.dinheiro);
-    // print(pessoa1.dinheiro);
-    // print(pessoa1.dinheiro);
+
+  String nome = pessoa1.nomeSecreto;
+  print(nome.toUpperCase());
+
+  if (pessoa1.atributo != null) {
+    print(pessoa1.atributo!.toUpperCase());
   }
+
+  print(pessoa1.nomeSecreto);
+  print(pessoa1.nomeSecreto);
 
   pessoa1.valorDoCarro;
   print(pessoa1.valorDoCarro);
@@ -33,6 +38,20 @@ class Pessoa {
   bool casado;
 
   double _dinheiro = 0;
+
+  String? _nomeSecreto = 'Flutter';
+
+  String? atributo;
+
+  get nomeSecreto {
+    String? nome = _nomeSecreto;
+    if (nome != null) {
+      _nomeSecreto = null;
+      return nome;
+    } else {
+      return null;
+    }
+  }
 
   @override
   String toString() {
