@@ -2,7 +2,9 @@ void main() {
   Pessoa pessoa1 = Pessoa(nome: 'David', idade: 34);
 
   pessoa1.comer();
-  Pessoa.atributoStatic = 'Olá';
+  Pessoa.atributoStatic = 'David';
+
+  print(Pessoa.metodoStatic());
 }
 
 class Pessoa {
@@ -15,5 +17,9 @@ class Pessoa {
     print('Comendo');
   }
 
-  static String atributoStatic = '';
+  static String atributoStatic = 'abc';
+
+  static String metodoStatic() {
+    return 'Olá mundo, $atributoStatic!';
+  }
 }
