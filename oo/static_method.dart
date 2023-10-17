@@ -1,10 +1,10 @@
 void main() {
+  Pessoa.alturaPadrao = 1.80;
+
   Pessoa pessoa1 = Pessoa(nome: 'David', idade: 34);
-
   pessoa1.comer();
-  Pessoa.atributoStatic = 'David';
 
-  print(Pessoa.metodoStatic());
+  print(pessoa1.altura);
 }
 
 class Pessoa {
@@ -12,6 +12,7 @@ class Pessoa {
 
   String nome;
   int idade;
+  double altura = alturaPadrao;
 
   void comer() {
     print('Comendo');
@@ -22,4 +23,6 @@ class Pessoa {
   static String metodoStatic() {
     return 'Olá mundo, $atributoStatic!';
   }
+
+  static double alturaPadrao = 0;
 }
